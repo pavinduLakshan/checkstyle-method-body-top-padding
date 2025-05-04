@@ -15,7 +15,7 @@ public class MethodBodyTopPaddingCheck extends AbstractCheck {
     public void visitToken(DetailAST methodDef) {
         DetailAST slist = methodDef.findFirstToken(TokenTypes.SLIST);
         if (slist == null) {
-            return; // e.g., abstract method or interface method
+            return;
         }
 
         // Line of opening brace `{`
