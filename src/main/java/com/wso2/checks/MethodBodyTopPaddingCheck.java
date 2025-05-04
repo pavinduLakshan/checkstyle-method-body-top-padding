@@ -30,7 +30,7 @@ public class MethodBodyTopPaddingCheck extends AbstractCheck {
         if (firstStatement != null) {
             int firstStatementLine = firstStatement.getLineNo();
 
-            if (firstStatementLine == braceLine + 1) {
+            if (firstStatementLine <= braceLine || firstStatementLine == braceLine + 1) {
                 log(firstStatementLine, firstStatement.getColumnNo(), MSG_KEY);
             }
         }
